@@ -6,32 +6,37 @@
 
 ## Config
 
-- Enter following variables into .env file
+- Enter following variables into [config.json](./config.json) file based on [config.sample](./config.sample)
 
-```.env
-RPC_URL=
+```config.json
+{
+  "RPC_URL": string,
 
-WALLET_PRIVATE_KEY=Ethereum compatible wallet private key
+  "WALLET_PRIVATE_KEY": string,
 
-FROM_TOKEN_AMOUNT_RAW=Raw amount of from token eg.: If from token is USDT and amount is 10, raw amount is 10000000 (USDT has 6 decimals)
-FROM_TOKEN_ADDRESS=ERC20 token address eg.: (USDT on Arbitrum - 0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9)
-TO_TOKEN_ADDRESS=ERC20 token address eg.: (wBTC on Arbitrum - 0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f)
+  "FROM_TOKEN_AMOUNT_RAW": number,
+  "FROM_TOKEN_ADDRESS": string,
+  "TO_TOKEN_ADDRESS": string
+}
 
 ```
 
 ## Run
 
 Build
+
 ```sh
 npm run build
 ```
 
 Give the file execution permission
+
 ```sh
 chmod +x dist/index.js
 ```
 
 Run
+
 ```sh
 ./dist/index.js
 ```
